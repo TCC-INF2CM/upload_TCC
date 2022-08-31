@@ -31,6 +31,12 @@ create table Fornecedor
 	primary key(id)
 )
 
+create table tpProduto
+(	id int identity,
+	TipodeProduto varchar(150)not null,
+	primary key(id)
+)
+
 create table Produto
 (	id int identity,
 	Nome varchar(100)not null,
@@ -44,12 +50,6 @@ create table Produto
 	foreign key(tpProduto_id)
 		references tpProduto(id)
 )
-create table tpProduto
-(	id int identity,
-	TipodeProduto varchar(150)not null,
-	primary key(id)
-)
-
 create table Form_Pagamento
 (	id int identity,
 	Fm_pagamento varchar(50)not null,
